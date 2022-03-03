@@ -1,12 +1,13 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 // Screens
 import Discover from '../features/discover/screen';
 import {Auth} from './auth';
 import {Main} from './main';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {LoadingScreen} from '../features/loading/screen';
+//
 
 const Stack = createNativeStackNavigator();
 
@@ -27,7 +28,7 @@ export default function Navigation() {
   if (!loaded) return <LoadingScreen />;
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="auth">
         {!visitedDiscover && (
           <Stack.Screen
             name="discover"

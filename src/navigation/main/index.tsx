@@ -6,9 +6,9 @@ import {SettingScreen} from '../../features/settings/screen';
 const Tab = createBottomTabNavigator();
 export function Main() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Feed" component={HomeScreen} />
-      <Tab.Screen name="Messages" component={SettingScreen} />
+    <Tab.Navigator initialRouteName="main-home">
+      <Tab.Screen name="main-home" component={HomeScreen} />
+      <Tab.Screen name="main-settings" component={SettingScreen} />
     </Tab.Navigator>
   );
 }
