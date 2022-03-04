@@ -1,5 +1,5 @@
-import {Center, Flex, Spinner, Text} from 'native-base';
 import React from 'react';
+import {Center, Flex, Spinner, Text} from 'native-base';
 
 export function LoadingScreen() {
   return (

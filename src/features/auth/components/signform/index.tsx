@@ -1,11 +1,11 @@
 import React from 'react';
-import {Box, Flex, FormControl, Icon, Input, Text} from 'native-base';
+import {Flex, FormControl, Icon, Input, ScrollView, Text} from 'native-base';
 import {PrimaryButton} from '../../../../components/button';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export function SignInForm() {
   return (
-    <Box mt="10">
+    <ScrollView mt="10">
       <FormControl>
         <FormControl.Label>
           <Text fontSize="sub" fontWeight="900">
@@ -21,16 +21,16 @@ export function SignInForm() {
         </Text>
       </Flex>
       <PrimaryButton title="Login" size="header" />
-    </Box>
+    </ScrollView>
   );
 }
 export function SignUpForm() {
   return (
-    <Box mt="2">
+    <ScrollView mt="2">
       <FormControl>
         <FormControl.Label>
           <Text fontSize="sub" fontWeight="900">
-            First nameZ
+            First name
           </Text>
         </FormControl.Label>
         <Input variant="outline" placeholder="First name" />
@@ -58,7 +58,7 @@ export function SignUpForm() {
         </Text>
       </Flex>
       <PrimaryButton title="Sign up" size="header" />
-    </Box>
+    </ScrollView>
   );
 }
 
