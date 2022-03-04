@@ -1,8 +1,15 @@
 import {extendTheme} from 'native-base';
 import {Dimensions} from 'react-native';
 
-const {height} = Dimensions.get('window');
-const fontScale = height / 50;
+const {height, width} = Dimensions.get('window');
+let unit: number;
+if (height >= width) {
+  unit = width / height;
+} else {
+  unit = height / width;
+}
+console.log(unit);
+const fontScale = unit * 30;
 export const theme = extendTheme({
   config: {
     initialColorMode: 'light',
@@ -53,9 +60,48 @@ export const theme = extendTheme({
         italic: 'Raleway-ExtraBoldItalic',
       },
     },
+    QuickSand: {
+      100: {
+        normal: 'QuickSand-Light',
+        italic: 'QuickSand-Light',
+      },
+      200: {
+        normal: 'QuickSand-Light',
+        italic: 'QuickSand-Light',
+      },
+      300: {
+        normal: 'QuickSand-Meduim',
+        italic: 'QuickSand-Meduim',
+      },
+      400: {
+        normal: 'QuickSand-Medium',
+        italic: 'QuickSand-Meduim',
+      },
+      500: {
+        normal: 'QuickSand-Regular',
+        italic: 'QuickSand-Regular',
+      },
+      600: {
+        normal: 'QuickSand-Regular',
+        italic: 'QuickSand-Regular',
+      },
+      700: {
+        normal: 'Raleway-SemiBold',
+        italic: 'Raleway-SemiBold',
+      },
+      800: {
+        normal: 'Raleway-SemiBold',
+        italic: 'Raleway-SemiBold',
+      },
+      900: {
+        normal: 'Raleway-Bold',
+        italic: 'Raleway-Bold',
+      },
+    },
   },
   fonts: {
     rale: 'Raleway',
+    quickSand: 'QuickSand',
   },
   colors: {
     primary: '#151D3B',
@@ -68,13 +114,14 @@ export const theme = extendTheme({
   components: {
     Text: {
       defaultProps: {
-        fontFamily: 'rale',
+        fontFamily: 'quickSand',
         fontSize: 'body',
       },
     },
     Button: {
       defaultProps: {
         background: '#151D3B',
+        _pressed: {bg: '', opacity: '0.5'},
       },
     },
   },

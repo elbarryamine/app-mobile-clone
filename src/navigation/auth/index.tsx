@@ -1,6 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Login, Signup, Register} from '../../features/auth/screen';
+import {AuthNavigation} from '../../components/navigation';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,12 +15,16 @@ export function Auth() {
       />
       <Stack.Screen
         name="auth-login"
-        options={{headerShown: false}}
+        options={{
+          header: props => <AuthNavigation {...props} />,
+        }}
         component={Login}
       />
       <Stack.Screen
         name="auth-signup"
-        options={{headerShown: false}}
+        options={{
+          header: props => <AuthNavigation {...props} />,
+        }}
         component={Signup}
       />
     </Stack.Navigator>
