@@ -6,7 +6,7 @@ import {TouchableOpacity} from 'react-native';
 
 export function AuthNavigation({navigation}: NativeStackHeaderProps) {
   return (
-    <Center h={50} justifyItems="center" px="5%" bg="white">
+    <Center h={50} justifyItems="center" px="5%" bg="background">
       <Flex w="100%">
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Icon name="arrow-left-thin" size={30} color="black" />

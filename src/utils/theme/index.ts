@@ -86,16 +86,16 @@ export const theme = extendTheme({
         italic: 'QuickSand-Regular',
       },
       700: {
-        normal: 'Raleway-SemiBold',
-        italic: 'Raleway-SemiBold',
+        normal: 'QuickSand-SemiBold',
+        italic: 'QuickSand-SemiBold',
       },
       800: {
-        normal: 'Raleway-SemiBold',
-        italic: 'Raleway-SemiBold',
+        normal: 'QuickSand-SemiBold',
+        italic: 'QuickSand-SemiBold',
       },
       900: {
-        normal: 'Raleway-Bold',
-        italic: 'Raleway-Bold',
+        normal: 'QuickSand-Bold',
+        italic: 'QuickSand-Bold',
       },
     },
   },
@@ -104,7 +104,8 @@ export const theme = extendTheme({
     quickSand: 'QuickSand',
   },
   colors: {
-    primary: '#151D3B',
+    background: '#F7F7F7',
+    primary: '#11052C',
     secondary: '#D82148',
     textPrimary: '#F0F0F0',
     text: '#000',
@@ -112,6 +113,12 @@ export const theme = extendTheme({
     sub: '#EFEFEF',
   },
   components: {
+    Heading: {
+      defaultProps: {
+        fontFamily: 'rale',
+        fontSize: 'display',
+      },
+    },
     Text: {
       defaultProps: {
         fontFamily: 'quickSand',
@@ -120,7 +127,7 @@ export const theme = extendTheme({
     },
     Button: {
       defaultProps: {
-        background: '#151D3B',
+        background: '#11052C',
         _pressed: {bg: '', opacity: '0.5'},
       },
     },

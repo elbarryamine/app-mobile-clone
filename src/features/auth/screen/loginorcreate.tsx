@@ -44,7 +44,7 @@ export function Register({navigation}: Props) {
   }
 
   return (
-    <Box w="100%" h="100%" bg="white">
+    <Box w="100%" h="100%" bg="background">
       <Center h="50%" mt="10%">
         <Carousel
           ref={ref}
@@ -94,7 +94,7 @@ export function Register({navigation}: Props) {
 
 function CarouselItem({item}: {item: DataItem; index: number}) {
   return (
-    <Center bg="white" shadow="base" py="10%">
+    <Center bg="background" shadow="base" py="10%">
       {item.image}
       <Text>{item.header}</Text>
       <Text fontSize="sub" color="subDarker">
