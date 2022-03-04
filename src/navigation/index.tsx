@@ -1,6 +1,9 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {
+  createNativeStackNavigator,
+  NativeStackHeaderProps,
+} from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 // Screens
 import Discover from '../features/discover/screen';
@@ -41,12 +44,28 @@ export default function Navigation() {
           name="auth"
           component={Auth}
         />
-        <Stack.Screen
-          options={{headerShown: false}}
-          name="main"
-          component={Main}
-        />
+        <Stack.Screen options={{headerShown: false}} name="main">
+          {(props: NativeStackHeaderProps) => (
+            <Protect navigation={props.navigation}>
+              <Main {...props} />
+            </Protect>
+          )}
+        </Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
+}
+
+type ProtectProps = {
+  children: React.ReactElement;
+  navigation: NativeStackHeaderProps['navigation'];
+};
+function Protect(props: ProtectProps) {
+  let isAuth = false;
+  if (isAuth) {
+    return props.children;
+  } else {
+    props.navigation.push('auth-login');
+    return null;
+  }
 }

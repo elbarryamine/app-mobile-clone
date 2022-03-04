@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Text} from 'native-base';
+import {Button, IButtonProps, Text} from 'native-base';
 
 type Props = {
   title: string;
@@ -8,9 +8,9 @@ type Props = {
 PrimaryButton.defaultProps = {
   size: 'header',
 };
-export function PrimaryButton({title, size}: Props) {
+export function PrimaryButton({title, size, ...props}: Props & IButtonProps) {
   return (
-    <Button w="100%" shadow="4">
+    <Button w="100%" shadow="4" {...props}>
       <Text fontSize={size} color="white">
         {title}
       </Text>

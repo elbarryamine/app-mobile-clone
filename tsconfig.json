@@ -14,16 +14,16 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "baseUrl": "src",
-    "paths": {
-      "@assets/*": ["assets/*"],
-      "@components/*": ["components/*"],
-      "@features/*": ["features/*"],
-      "@navigation/*": ["navigation/*"],
-      "@provider/*": ["provider/*"],
-      "@utils/*": ["utils/*"]
-    }
+    "resolveJsonModule": true
+    // "baseUrl": "src",
+    // "paths": {
+    //   "@assets/*": ["assets/*"],
+    //   "@components/*": ["components/*"],
+    //   "@features/*": ["features/*"],
+    //   "@navigation/*": ["navigation/*"],
+    //   "@provider/*": ["provider/*"],
+    //   "@utils/*": ["utils/*"]
+    // }
   },
   "exclude": [
     "node_modules",

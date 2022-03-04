@@ -2,6 +2,8 @@ import React from 'react';
 import {NativeBaseProvider} from 'native-base';
 import {theme} from '../utils/theme';
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
+import {Provider} from 'react-redux';
+import {store} from '../redux/store';
 
 type Props = {
   children: React.ReactElement;
@@ -12,8 +14,10 @@ const client = new ApolloClient({
 });
 export function AppProviders(props: Props) {
   return (
-    <ApolloProvider client={client}>
-      <NativeBaseProvider theme={theme}>{props.children}</NativeBaseProvider>
-    </ApolloProvider>
+    <Provider store={store}>
+      <ApolloProvider client={client}>
+        <NativeBaseProvider theme={theme}>{props.children}</NativeBaseProvider>
+      </ApolloProvider>
+    </Provider>
   );
 }
