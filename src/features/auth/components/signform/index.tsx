@@ -51,6 +51,15 @@ export function SignUpForm() {
         </FormControl.Label>
         <Input variant="outline" placeholder="Email Address" />
       </FormControl>
+      <FormControl>
+        <FormControl.Label>
+          <Text fontSize="sub" fontWeight="900">
+            Phone
+          </Text>
+        </FormControl.Label>
+        <Input variant="outline" placeholder="Email Address" />
+      </FormControl>
+      <PasswordInput label="Password Confirm" />
       <PasswordInput label="Password" />
       <Flex align="flex-end" py="5">
         <Text fontSize="sub" fontWeight="900">
