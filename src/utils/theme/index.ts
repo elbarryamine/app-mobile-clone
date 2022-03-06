@@ -60,52 +60,51 @@ export const theme = extendTheme({
         italic: 'Raleway-ExtraBoldItalic',
       },
     },
-    QuickSand: {
-      100: {
-        normal: 'QuickSand-Light',
-        italic: 'QuickSand-Light',
-      },
-      200: {
-        normal: 'QuickSand-Light',
-        italic: 'QuickSand-Light',
-      },
-      300: {
-        normal: 'QuickSand-Meduim',
-        italic: 'QuickSand-Meduim',
-      },
-      400: {
-        normal: 'QuickSand-Medium',
-        italic: 'QuickSand-Meduim',
-      },
-      500: {
-        normal: 'QuickSand-Regular',
-        italic: 'QuickSand-Regular',
-      },
-      600: {
-        normal: 'QuickSand-Regular',
-        italic: 'QuickSand-Regular',
-      },
-      700: {
-        normal: 'QuickSand-SemiBold',
-        italic: 'QuickSand-SemiBold',
-      },
-      800: {
-        normal: 'QuickSand-SemiBold',
-        italic: 'QuickSand-SemiBold',
-      },
-      900: {
-        normal: 'QuickSand-Bold',
-        italic: 'QuickSand-Bold',
-      },
-    },
+    // QuickSand: {
+    //   100: {
+    //     normal: 'QuickSand-Light',
+    //     italic: 'QuickSand-Light',
+    //   },
+    //   200: {
+    //     normal: 'QuickSand-Light',
+    //     italic: 'QuickSand-Light',
+    //   },
+    //   300: {
+    //     normal: 'QuickSand-Meduim',
+    //     italic: 'QuickSand-Meduim',
+    //   },
+    //   400: {
+    //     normal: 'QuickSand-Medium',
+    //     italic: 'QuickSand-Meduim',
+    //   },
+    //   500: {
+    //     normal: 'QuickSand-Regular',
+    //     italic: 'QuickSand-Regular',
+    //   },
+    //   600: {
+    //     normal: 'QuickSand-Regular',
+    //     italic: 'QuickSand-Regular',
+    //   },
+    //   700: {
+    //     normal: 'QuickSand-SemiBold',
+    //     italic: 'QuickSand-SemiBold',
+    //   },
+    //   800: {
+    //     normal: 'QuickSand-SemiBold',
+    //     italic: 'QuickSand-SemiBold',
+    //   },
+    //   900: {
+    //     normal: 'QuickSand-Bold',
+    //     italic: 'QuickSand-Bold',
+    //   },
+    // },
   },
   fonts: {
     rale: 'Raleway',
-    quickSand: 'QuickSand',
   },
   colors: {
     background: '#F7F7F7',
-    primary: '#11052C',
+    primary: '#398AB9',
     secondary: '#D82148',
     textPrimary: '#F0F0F0',
     text: '#000',
@@ -121,13 +120,13 @@ export const theme = extendTheme({
     },
     Text: {
       defaultProps: {
-        fontFamily: 'quickSand',
+        fontFamily: 'rale',
         fontSize: 'body',
       },
     },
     Button: {
       defaultProps: {
-        background: '#11052C',
+        background: '#398AB9',
         _pressed: {bg: '', opacity: '0.5'},
       },
     },

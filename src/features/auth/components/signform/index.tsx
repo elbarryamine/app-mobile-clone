@@ -2,8 +2,10 @@ import React from 'react';
 import {Flex, FormControl, Icon, Input, ScrollView, Text} from 'native-base';
 import {PrimaryButton} from '../../../../components/button';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {useNavigation} from '@react-navigation/native';
 
 export function SignInForm() {
+  const {navigate} = useNavigation();
   return (
     <ScrollView mt="10">
       <FormControl>
@@ -20,7 +22,11 @@ export function SignInForm() {
           Forgot password ?
         </Text>
       </Flex>
-      <PrimaryButton title="Login" size="header" />
+      <PrimaryButton
+        title="Login"
+        size="header"
+        onPress={() => navigate('main' as never)}
+      />
     </ScrollView>
   );
 }

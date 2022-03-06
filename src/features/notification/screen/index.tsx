@@ -2,10 +2,10 @@ import React from 'react';
 import {Text} from 'native-base';
 import Screen from '../../../components/screen';
 
-export function SettingScreen() {
+export function NotificationScreen() {
   return (
     <Screen>
-      <Text>settings</Text>
+      <Text>NotificationScreen</Text>
     </Screen>
   );
 }

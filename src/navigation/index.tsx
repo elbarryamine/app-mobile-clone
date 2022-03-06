@@ -61,7 +61,7 @@ type ProtectProps = {
   navigation: NativeStackHeaderProps['navigation'];
 };
 function Protect(props: ProtectProps) {
-  let isAuth = false;
+  let isAuth = true;
   if (isAuth) {
     return props.children;
   } else {
