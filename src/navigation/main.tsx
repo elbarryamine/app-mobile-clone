@@ -1,10 +1,8 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {HomeScreen} from '../features/home/screen';
-import {SettingScreen} from '../features/settings/screen';
+import {HomeScreen} from '@features/home/screen';
 import {NativeStackHeaderProps} from '@react-navigation/native-stack';
-import {MainNavigation, TabNavigation} from '../components/navigation';
-import {NotificationScreen} from '../features/notification/screen';
+import {TabNavigation} from '@components/navigation';
 
 const Tab = createBottomTabNavigator();
 export function Main({}: NativeStackHeaderProps) {
@@ -13,19 +11,29 @@ export function Main({}: NativeStackHeaderProps) {
       initialRouteName="main-home"
       tabBar={props => <TabNavigation {...props} />}>
       <Tab.Screen
-        name="main-home"
+        name="home"
         component={HomeScreen}
         options={{headerShown: false}}
       />
       <Tab.Screen
-        name="main-notifications"
-        component={NotificationScreen}
-        options={{header: props => <MainNavigation {...props} />}}
+        name="calls"
+        component={HomeScreen}
+        options={{headerShown: false}}
       />
       <Tab.Screen
-        name="main-settings"
-        component={SettingScreen}
-        options={{header: props => <MainNavigation {...props} />}}
+        name="story"
+        component={HomeScreen}
+        options={{headerShown: false}}
+      />
+      <Tab.Screen
+        name="camera"
+        component={HomeScreen}
+        options={{headerShown: false}}
+      />
+      <Tab.Screen
+        name="account"
+        component={HomeScreen}
+        options={{headerShown: false}}
       />
     </Tab.Navigator>
   );

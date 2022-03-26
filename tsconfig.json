@@ -14,17 +14,18 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
-    // "baseUrl": "src",
-    // "paths": {
-    //   "@assets/*": ["assets/*"],
-    //   "@components/*": ["components/*"],
-    //   "@features/*": ["features/*"],
-    //   "@navigation/*": ["navigation/*"],
-    //   "@provider/*": ["provider/*"],
-    //   "@utils/*": ["utils/*"]
-    // }
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["src/assets/images/*"],
+      "@components/*": ["src/components/*"],
+      "@features/*": ["src/features/*"],
+      "@navigation/*": ["src/navigation/*"],
+      "@provider/*": ["src/provider/*"],
+      "@utils/*": ["src/utils/*"]
+    }
   },
+  "include": ["./src/**/*"],
   "exclude": [
     "node_modules",
     "babel.config.js",

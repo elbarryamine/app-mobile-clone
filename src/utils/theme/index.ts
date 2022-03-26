@@ -12,7 +12,7 @@ console.log(unit);
 const fontScale = unit * 30;
 export const theme = extendTheme({
   config: {
-    initialColorMode: 'light',
+    initialColorMode: 'dark',
   },
   fontSizes: {
     display: Math.round(fontScale * 1.8),
@@ -60,57 +60,11 @@ export const theme = extendTheme({
         italic: 'Raleway-ExtraBoldItalic',
       },
     },
-    // QuickSand: {
-    //   100: {
-    //     normal: 'QuickSand-Light',
-    //     italic: 'QuickSand-Light',
-    //   },
-    //   200: {
-    //     normal: 'QuickSand-Light',
-    //     italic: 'QuickSand-Light',
-    //   },
-    //   300: {
-    //     normal: 'QuickSand-Meduim',
-    //     italic: 'QuickSand-Meduim',
-    //   },
-    //   400: {
-    //     normal: 'QuickSand-Medium',
-    //     italic: 'QuickSand-Meduim',
-    //   },
-    //   500: {
-    //     normal: 'QuickSand-Regular',
-    //     italic: 'QuickSand-Regular',
-    //   },
-    //   600: {
-    //     normal: 'QuickSand-Regular',
-    //     italic: 'QuickSand-Regular',
-    //   },
-    //   700: {
-    //     normal: 'QuickSand-SemiBold',
-    //     italic: 'QuickSand-SemiBold',
-    //   },
-    //   800: {
-    //     normal: 'QuickSand-SemiBold',
-    //     italic: 'QuickSand-SemiBold',
-    //   },
-    //   900: {
-    //     normal: 'QuickSand-Bold',
-    //     italic: 'QuickSand-Bold',
-    //   },
-    // },
   },
   fonts: {
     rale: 'Raleway',
   },
-  colors: {
-    background: '#F7F7F7',
-    primary: '#398AB9',
-    secondary: '#D82148',
-    textPrimary: '#F0F0F0',
-    text: '#000',
-    subDarker: '#D1D1D1',
-    sub: '#EFEFEF',
-  },
+  colors: {},
   components: {
     Heading: {
       defaultProps: {
