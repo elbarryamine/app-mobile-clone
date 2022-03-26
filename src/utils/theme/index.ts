@@ -20,6 +20,7 @@ export const theme = extendTheme({
     body: Math.round(fontScale * 1.2),
     sub: Math.round(fontScale),
     tiny: Math.round(fontScale * 0.8),
+    micro: Math.round(fontScale * 0.7),
   },
   fontConfig: {
     Raleway: {
